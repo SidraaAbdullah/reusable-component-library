@@ -1,5 +1,4 @@
 import React from "react";
-import Spinner from "components/spinner";
 import * as Styles from "./CustomButton.styles";
 
 const CustomButton = (props) => {
@@ -29,11 +28,7 @@ const CustomButton = (props) => {
       >
         {leftIcon && leftIcon}
         {title}
-        {isLoading && (
-          <Styles.SpinnerContainer>
-            <Spinner color="white" />
-          </Styles.SpinnerContainer>
-        )}
+        {isLoading && <Styles.SpinnerContainer>hello</Styles.SpinnerContainer>}
         {isIcon && isIcon}
       </button>
     </Styles.Button>
