@@ -1,6 +1,6 @@
 import React from "react";
 import * as Styles from "./CustomButton.styles";
-import Spinner from "../spinner/Spinner";
+import Spinner from "./components/spinner/Spinner";
 
 const CustomButton = (props) => {
   const {
