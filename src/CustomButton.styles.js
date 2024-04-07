@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SpinnerContainer = styled.div`
   position: absolute;
@@ -13,8 +13,7 @@ export const SpinnerContainer = styled.div`
 `;
 
 export const Button = styled.div`
-  pointer-events: ${({ loading, pointerEvents }) =>
-    pointerEvents?.pointerEvents ? "none" : loading ? "none" : ""};
+  pointer-events: ${({ loading, pointerEvents }) => (pointerEvents?.pointerEvents ? 'none' : loading ? 'none' : '')};
   p {
     opacity: ${({ loading }) => (loading ? 0.3 : 1)};
   }
@@ -24,14 +23,13 @@ export const Button = styled.div`
 
   button {
     text-transform: uppercase;
-    opacity: ${({ loading, pointerEvents }) =>
-      pointerEvents?.pointerEvents ? 0.7 : loading ? 0.7 : 1};
+    opacity: ${({ loading, pointerEvents }) => (pointerEvents?.pointerEvents ? 0.7 : loading ? 0.7 : 1)};
     color: white;
     opacity: ${({ loading }) => (loading ? 0.3 : 1)};
-    background-color: ${(props) => props.theme.primaryDarkColor};
+    background-color: orange;
     border: 0;
     padding: 0.6rem 1.4rem;
-    font-size: ${(props) => props.theme.default?.p};
+    font-size: 16px;
     margin: 0;
     font-weight: bold;
     border-radius: 5px;
