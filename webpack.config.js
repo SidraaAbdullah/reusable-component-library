@@ -3,12 +3,24 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "my-first-webpack.bundle.js",
     path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
   },
   module: {
     rules: [
-      { test: /\.(jsx|txt|png|jpg|gif|svg|pdf|docx)$/, use: "raw-loader" },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
+        },
+      },
     ],
+  },
+  resolve: {
+    extensions: [".js", ".jsx"],
   },
 };
