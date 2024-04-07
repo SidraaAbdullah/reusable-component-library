@@ -1,5 +1,5 @@
 import React from "react";
-import { SpinnerContainer } from "./Styles";
+import { SpinnerContainer } from "./Spinner.styles";
 
 const Spinner = ({ color, size, style, classes }) => {
   return (
